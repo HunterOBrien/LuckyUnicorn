@@ -1,5 +1,5 @@
-""" Component 2 (How much) v2
-uses a try except and pull error message out of the loop
+""" Component 2 (How much) v3
+compressed the code into something more efficient
 """
 
 error = "Please enter a whole number between 1 and 10\n"

@@ -25,6 +25,7 @@ def yes_no(question_text):
             print("Please answer yes or no")
 
 
+# Function to display instructions
 def instructions():
     print("***** How To Play *****")
     print()
@@ -34,10 +35,35 @@ def instructions():
     print()
 
 
+# Number checking function
+def num_check(question, low, high):
+    error = "That was not a valid input\n" \
+            "Please enter a whole number between {} and {}\n".format(low, high)
+
+    # Keep asking until a valid amount is given
+    while True:
+        try:
+            # Ask for amount
+            response = int(input(question))
+
+            # Check for num in required range
+            if low <= response <= high:
+                return response
+
+            else:
+                print(error)
+
+        except ValueError:
+            print(error)
+
+
 # Main routine goes here
+# Checks whether the user needs instructions
 played_before = yes_no("Have you played this game before? ")
 
 if played_before == "No":
     instructions()
-else:
-    print("Program Continues")
+
+# Asks how much the user wants to play with
+user_balance = num_check("How much would you like to play with $", 1, 10)
+print(f"You are playing with {user_balance}")

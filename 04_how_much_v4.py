@@ -1,5 +1,5 @@
-""" Component 2 (How much) v2
-uses a try except and pull error message out of the loop
+""" Component 2 (How much) v4
+Turned the component into a function and added more ability for the code to be recycled
 """
 
 
