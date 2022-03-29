@@ -2,17 +2,28 @@
 uses a try except and pull error message out of the loop
 """
 
-error = "Please enter a whole number between 1 and 10\n"
-user_balance = 0
 
-while not 1 <= user_balance <= 10:
-    try:
-        # Ask for amount
-        user_balance = int(input("How much would you like to play with? $"))
+def num_check(question, low, high):
+    error = "That was not a valid input\n" \
+            "Please enter a whole number between {} and {}\n".format(low, high)
 
-        print()
+    # Keep asking until a valid amount is given
+    while True:
+        try:
+            # Ask for amount
+            response = int(input(question))
 
-    except ValueError:
-        print(error)
+            # Check for num in required range
+            if low <= response <= high:
+                return response
 
+            else:
+                print(error)
+
+        except ValueError:
+            print(error)
+
+
+# Main routine
+user_balance = num_check("How much would you like to play with $", 1, 10)
 print(f"You are playing with {user_balance}")
