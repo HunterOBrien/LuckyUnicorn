@@ -1,5 +1,6 @@
-""" LU base component v2
+""" LU base component v3
 components added after they have been created and tested
+updated instructions
 """
 
 import random
@@ -34,10 +35,12 @@ def instructions():
     print("You pay $1 each round and are given a random token")
     print()
     print("This random token is either a Unicorn, Donkey, Zebra or Horse")
+    print("Here Are The Payout Amounts:")
     print()
-    print("Unicorns give you money if you get one, but the other three tokens")
-    print("Make you lose money")
-    print()
+    print("If you get a Unicorn, you earn $4")
+    print("If you get a Donkey, you lose $1")
+    print("If you get a Zebra, you lose $0.50")
+    print("If you get a Horse, you lose $0.50")
     print("Press enter to keep playing, or 'x' to cash out")
 
 
