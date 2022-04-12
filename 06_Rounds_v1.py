@@ -27,7 +27,7 @@ while play_again != "x":
 
     # If the random number is between 10 and 46
     # The user gets a Donkey (Minus $1)
-    
+
     elif 10 <= number <= 46:
         token = "donkey"
         balance -= 1
