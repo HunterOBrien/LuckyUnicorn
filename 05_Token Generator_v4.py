@@ -1,6 +1,6 @@
-""" component 3 (Token Generator) v3
-    Changes the code to make it more adaptable and into a better system.
-    Calculates percentage chances of each token
+""" component 3 (Token Generator) v4
+    Calculates percentages to ensure odds are in favor of the house
+    9% Unicorns, 37% Donkey, and 27% for Zebra and Horse
 """
 
 import random
